@@ -62,7 +62,7 @@ nmcli connection add type vlan ifname bond0.2026 con-name bond0.2026 id 10 dev b
 
 nmcli connection add type vlan ifname bond0.2028 con-name bond0.2028 id 10 dev bond0 ip4 10.20.30.20/24 gw4 10.20.30.1 ipv4.method manual
 
-nmcli connection add type vlan ifname bond1.2027 con-name bond1.2027 id 10 dev bond0 ip4 10.20.30.30/24 gw4 10.20.30.1 ipv4.method manual
+nmcli connection add type vlan ifname bond1.2027 con-name bond1.2027 id 10 dev bond1 ip4 10.20.30.30/24 gw4 10.20.30.1 ipv4.method manual
 
 nmcli connection modify bond0.10 ipv4.dns 8.8.8.8 (optional)
 ```
