@@ -305,5 +305,68 @@ spec:
       args:
         - "Finished!"
 ```
+`tkn task ls`
+![Alt text](image-1.png)
 
-1. Create the pipeline.
+
+3. Create the pipeline.
+```
+vi cpipeline.yaml
+apiVersion: tekton.dev/v1beta1
+kind: Pipeline
+metadata:
+  name: cpipeline1
+spec:
+  tasks:
+    - name: task1
+      taskRef:
+        kind: Task
+        name: ctask1
+    - name: task2
+      taskRef:
+        kind: Task
+        name: ctask2
+    - name: task3
+      taskRef:
+        kind: Task
+        name: ctask3
+    - name: task4
+      taskRef:
+        kind: Task
+        name: ctask4
+      runAfter:
+        - task1
+        - task2
+    - name: task5
+      taskRef:
+        kind: Task
+        name: ctask5
+      runAfter:
+        - task2
+        - task3
+    - name: task6
+      taskRef:
+        kind: Task
+        name: ctask6
+      runAfter:
+        - task4
+        - task5
+
+  finally:
+    - name: cleanup
+      taskRef:
+        kind: Task
+        name: ctaskfinisher
+
+# oc create -f cpipeline.yaml
+# tkn pipeline ls
+```
+![Alt text](image-2.png)
+
+4. Now go to the webconsole and start the pipeline.
+
+![Alt text](image-4.png)
+![Alt text](image-3.png)
+![Alt text](image-5.png)
+
+
