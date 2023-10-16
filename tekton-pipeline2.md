@@ -1,4 +1,6 @@
 ## Pipeline-Example
+### Here we have create a sample pipeline project where we doesn't require pvc or workspace or any other parameters. 
+### We always need to paas the parameters in the pipeline. Parameters like workspace, storage, git url, image, etc. 
 
 1. Create a Project where you will run your pipelines.
 
