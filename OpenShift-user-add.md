@@ -32,6 +32,5 @@ oc replace -f oauth1.yaml
 
 5. After updating the oauth check whether the authentiction operator started or not. Only after the pods started you can use the new users.(Login with users may take some time.)
 
-![Alt text](image-10.png)
-
 ![Alt text](image-9.png)
+![Alt text](image-10.png)
