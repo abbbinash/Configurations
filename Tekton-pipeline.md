@@ -11,7 +11,10 @@ sudo tar xvzf tkn_0.32.0_Linux_x86_64.tar.gz -C /usr/local/bin/ tkn
 2. Install OpenShift Pipelines from the OperatorHub in the web-console. Do not change any settings, intall as default.
 ![Alt text](image.png)
 
-3. Create a Project which you can use for pipelines.And check the service account which get created along with the pipeline that has permissions to pull and push the images.
+3. Installing this operator will create a service account.
+![Alt text](image-6.png)
+
+4. Create a Project which you can use for pipelines.And check the service account which get created along with the pipeline that has permissions to pull and push the images.
 
 ```
 oc new-project tekton-pipeline
