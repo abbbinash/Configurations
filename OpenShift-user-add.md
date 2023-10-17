@@ -34,3 +34,4 @@ oc replace -f oauth1.yaml
 
 ![Alt text](image-9.png)
 ![Alt text](image-10.png)
+![Alt text](image-11.png)
