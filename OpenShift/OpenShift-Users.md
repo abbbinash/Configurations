@@ -37,3 +37,11 @@ watch oc get pod -n openshift-authentication
 
 ![Alt text](../Images-all/image-15.png)
 ![Alt text](../Images-all/image-16.png)
+
+6. Assign roles to the users.
+```
+oc adm policy add-cluster-role-to-user cluster-admin new_user
+```
+![Alt text](../Images-all/image.png)
+
+
