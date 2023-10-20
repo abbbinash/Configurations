@@ -21,6 +21,7 @@ vi oauth.yaml  (add the required params)
 oc replace -f oauth.yaml
 ```
 ![Alt text](../image-12.png)
+![Alt text](../Images-all/image-12.png)
 
 
 Here I have update the oauth with highligted lines.One name is the secret which you have created and another give a name to the provider.
