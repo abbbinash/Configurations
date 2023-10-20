@@ -25,16 +25,16 @@ oc replace -f oauth.yaml
 
 Here I have update the oauth with highligted lines.One name is the secret which you have created and another give a name to the provider.
 
-1. Now after the pods gets restarted you can login with the new user.
+4. Now after the pods gets restarted you can login with the new user.
 
 ```
 watch oc get pod -n openshift-authentication
 ```
 
-![Alt text](image-13.png)
-![Alt text](image-14.png)
+![Alt text](../image-13.png)
+![Alt text](../image-14.png)
 
 5. Once the pods started, try login with the new users.
 
-![Alt text](image-16.png)
-![Alt text](image-15.png)
+![Alt text](../image-15.png)
+![Alt text](../image-16.png)
