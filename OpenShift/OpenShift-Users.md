@@ -45,3 +45,16 @@ oc adm policy add-cluster-role-to-user cluster-admin new_user
 ![Alt text](../Images-all/image.png)
 
 
+## Add new user with same secret.
+
+
+```
+ oc extract secret/mylocalusers -n openshift-config --to /root/htpasswd --confirm
+ cat htpasswd
+ htpasswd -b htpasswdfile new_user3 password
+ cat htpasswdfile
+ oc set data secret/mylocalusers --from-file=htpasswd=htpasswdfile -n openshift-config
+ watch oc get all -n openshift-authentication
+```
+![Alt text](../Images-all/1.png)
+
