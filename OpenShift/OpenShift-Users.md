@@ -58,3 +58,22 @@ oc adm policy add-cluster-role-to-user cluster-admin new_user
 ```
 ![Alt text](../Images-all/1.png)
 
+## Change password for users.
+
+1. Extract the file data from secret
+2. Generate random user password & assign it to MANAGER_PASSWD variable.
+3. Update password to the user
+4. Update the secret.
+5. Check for the pod to restart and try login with new password
+6. Follow the below steps.
+
+```
+oc extract secrets/mylocalusers -n openshift-config --to /root/htpasswd/ --confirm
+cat htpasswd
+MANAGER_PASSWD="$(openssl rand -hex 15)"
+htpasswd -b /root/htpasswd/htpasswd new_user3 ${MANAGER_PASSWD}
+oc get secrets -n openshift-config
+oc set data secret/mylocalusers --from-file htpasswd=htpasswd -n openshift-config
+oc get all -n openshift-authentication
+```
+
