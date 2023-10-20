@@ -1,5 +1,5 @@
 # RBAC
-## Creating user and assigning roles 
+## 1. Creating user and assigning roles 
 
 1. Create user with htpasswd and it file.
 ```
@@ -45,7 +45,7 @@ oc adm policy add-cluster-role-to-user cluster-admin new_user
 ![Alt text](../Images-all/image.png)
 
 
-## Add new user with same secret.
+## 2. Add new user with same secret.
 
 
 ```
@@ -58,7 +58,7 @@ oc adm policy add-cluster-role-to-user cluster-admin new_user
 ```
 ![Alt text](../Images-all/1.png)
 
-## Change password for users.
+## 3. Change password for users.
 
 1. Extract the file data from secret
 2. Generate random user password & assign it to MANAGER_PASSWD variable.
